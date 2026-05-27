@@ -1,0 +1,301 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap');
+
+  .sr-doc {
+    background: #0d0d0d;
+    color: #c8b99a;
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.85;
+    padding: 3rem 3.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #2a2218;
+  }
+
+  .sr-doc::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8a6a2e, #c9a84c, #8a6a2e, transparent);
+  }
+
+  .sr-doc::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8a6a2e, #c9a84c, #8a6a2e, transparent);
+  }
+
+  .corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: #8a6a2e;
+    border-style: solid;
+    opacity: 0.7;
+  }
+  .corner-tl { top: 10px; left: 10px; border-width: 1px 0 0 1px; }
+  .corner-tr { top: 10px; right: 10px; border-width: 1px 1px 0 0; }
+  .corner-bl { bottom: 10px; left: 10px; border-width: 0 0 1px 1px; }
+  .corner-br { bottom: 10px; right: 10px; border-width: 0 1px 1px 0; }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.5px solid #3a2e1a;
+    position: relative;
+  }
+
+  .title-kamon {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+    letter-spacing: 0.2em;
+  }
+
+  .title-main {
+    font-family: 'Cinzel', 'Trajan Pro', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #c9a84c;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+
+  .title-sub {
+    font-size: 12px;
+    color: #6a5a3a;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.8rem 0;
+    opacity: 0.5;
+  }
+  .ornament-line {
+    flex: 1;
+    height: 0.5px;
+    background: linear-gradient(90deg, transparent, #8a6a2e);
+  }
+  .ornament-line.r {
+    background: linear-gradient(90deg, #8a6a2e, transparent);
+  }
+  .ornament-diamond {
+    width: 5px;
+    height: 5px;
+    background: #c9a84c;
+    transform: rotate(45deg);
+  }
+
+  p {
+    margin: 0 0 1.1rem;
+    color: #c8b99a;
+  }
+
+  .dialogue {
+    color: #e8d8b8;
+    font-style: italic;
+    padding-left: 1.2rem;
+    border-left: 2px solid #3a2e1a;
+    margin: 1rem 0 1rem 0.5rem;
+  }
+
+  .it {
+    font-style: italic;
+    color: #a89070;
+  }
+
+  .beat {
+    text-align: center;
+    color: #6a5a3a;
+    letter-spacing: 0.4em;
+    font-size: 11px;
+    margin: 1.5rem 0;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 2rem 0;
+    opacity: 0.45;
+  }
+  .section-divider span {
+    font-size: 16px;
+    color: #c9a84c;
+  }
+  .section-divider .l {
+    flex: 1;
+    height: 0.5px;
+    background: #3a2e1a;
+  }
+
+  .final-block {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 0.5px solid #3a2e1a;
+  }
+
+  .commlink {
+    background: #151208;
+    border: 1px solid #2e2416;
+    border-left: 3px solid #c9a84c;
+    padding: 0.9rem 1.1rem;
+    margin: 1.2rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #a09060;
+  }
+  .commlink .sender {
+    color: #c9a84c;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .commlink .msg {
+    color: #b8a878;
+  }
+  .commlink .msg em {
+    color: #d4b864;
+    font-style: italic;
+  }
+
+  .closing-line {
+    text-align: center;
+    font-size: 12px;
+    color: #4a3e28;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+
+  .highlight-name {
+    color: #d4b864;
+    font-style: normal;
+  }
+</style>
+
+<div class="sr-doc">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="title-block">
+    <div class="title-kamon">⛩ ⚔ ⛩</div>
+    <h1 class="title-main">La Dette de l'Épée</h1>
+    <div class="title-sub">Scénario III &nbsp;·&nbsp; Épilogue &nbsp;·&nbsp; Tacoma, 2080</div>
+  </div>
+
+  <p>La salle sent le bois de cyprès et le thé froid.</p>
+
+  <p><span class="highlight-name">Tanaka Hiroshi</span> vous reçoit sans gardes du corps — premier signe. Les murs du dojo portent des encres calligraphiées et une armure de samouraï du dix-huitième siècle, anachronisme délibéré dans Tacoma, 2080.</p>
+
+  <p>Vous restez debout. Même en ayant dormi deux heures. Même en sentant encore la rouille des docks.</p>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-diamond"></div>
+    <div class="ornament-line r"></div>
+  </div>
+
+  <p><span class="highlight-name">Daisuke Mori</span> est à genoux. Quarante-deux ans, vingt ans de service — et ses mains ne tremblent pas. Mori ne craque pas. Il finit. La différence est réelle, et elle est désagréable à observer.</p>
+
+  <p><span class="highlight-name">Tanaka</span> parle sans vous regarder.</p>
+
+  <div class="dialogue">« Vous avez trouvé ce que j'avais refusé de voir. »</div>
+
+  <p>Pas d'excuses. Pas de fioritures.</p>
+
+  <div class="dialogue">« Les Anneaux de Séoul ont acheté dix-sept hommes dans mes rangs. Daisuke était le premier. »</div>
+
+  <p>IT a présenté les preuves sans omissions — logs chiffrés, transfers de nuyen, communications effacées mais pas assez. Dix-sept noms. Dix-sept entrées dans un registre que personne ne lui avait demandé de constituer. Mori n'a pas protesté. Il a juste demandé le droit de finir lui-même. Tanaka le lui a accordé.</p>
+
+  <p>Le tantō est posé sur un support en paulownia laqué. Époque Edo — ou une copie si parfaite que la différence ne compte plus ce soir.</p>
+
+  <div class="section-divider">
+    <div class="l"></div>
+    <span>⚔</span>
+    <div class="l"></div>
+  </div>
+
+  <p>Mori saisit le tantō des deux mains.</p>
+
+  <p>La salle retient son souffle sans qu'on lui ait demandé. Ce qui suit dure vingt secondes. <span class="highlight-name">Dotta</span> fixe un point sur le mur. <span class="highlight-name">Teklos</span> ne change pas de posture — il a vu mourir des gens de toutes les façons imaginables. <span class="highlight-name">Looping</span> a cessé de regarder ses doigts. <span class="highlight-name">Ina</span> ferme les yeux, une seconde, une seule.</p>
+
+  <p>Quand c'est fini, <span class="highlight-name">Tanaka</span> s'incline brièvement.</p>
+
+  <div class="dialogue">« Ma fille est en sécurité. »</div>
+
+  <p>Il pose sur la table une carte — physique, papier épais, un numéro à onze chiffres gravé en relief. Aucun nom. Aucune adresse.</p>
+
+  <div class="dialogue">« Une fois. »</div>
+
+  <div class="section-divider">
+    <div class="l"></div>
+    <span>⚔</span>
+    <div class="l"></div>
+  </div>
+
+  <p><span class="highlight-name">Kenji</span> vous raccompagne jusqu'à la sortie du dojo. Au moment où vous franchissez le seuil, il pose une main à plat contre le montant de la porte — pas pour bloquer, juste pour occuper l'espace.</p>
+
+  <div class="dialogue">« Mon père a une dette envers vous. »</div>
+
+  <p class="beat">— —</p>
+
+  <p>Un regard à <span class="highlight-name">Sylvariel</span>.</p>
+
+  <div class="dialogue">« Moi, j'en ai une différente. »</div>
+
+  <p>Il rentre dans le dojo. La porte se referme.</p>
+
+  <div class="final-block">
+    <p>Dehors, Tacoma s'étale sous le crachin perpétuel. Les néons du port tracent leurs grilles de lumière dans la grisaille de la baie. Personne ne parle.</p>
+
+    <p>Ce que vous avez fait cette nuit, c'est ce pour quoi vous aviez été payés — et quelque chose en plus. Une fille est vivante. Un frère est rentré. Une guerre n'a pas eu lieu. Un homme est mort dans un entrepôt des Docklands et ça aussi c'est dans la colonne des faits.</p>
+
+    <p class="it">Le soleil ne se lève jamais vraiment à Tacoma.</p>
+
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line r"></div>
+    </div>
+
+    <p>Trois secondes avant d'atteindre vos véhicules, votre commlink vibre.</p>
+
+    <div class="commlink">
+      <div class="sender">// Suture — message entrant — 04:47</div>
+      <div class="msg">
+        Lace. Appartement au-dessus du LoveLace. Ce matin. Arrêt cardiaque, qu'ils disent.<br><br>
+        <em>Personne croit vraiment ça.</em>
+      </div>
+    </div>
+
+    <p>Vous faites circuler l'appareil en silence.</p>
+
+    <p>Lace vous avait aidés parce que vous lui aviez posé les bonnes questions. Elle n'était pas armée. Pas vraiment dans le jeu. Elle avait juste vu trop de choses et dit ce qu'elle savait à des gens qui avaient l'air de vouloir faire quelque chose de bien avec.</p>
+
+    <p>Les Anneaux ont effacé leurs traces proprement. Comme ils font toujours.</p>
+
+    <p class="it">La pluie. Les néons. Un cargo quelque part dans la grisaille de la baie.</p>
+
+    <p>Vous traversez le parking, vers votre prochaine nuit.</p>
+  </div>
+
+  <div class="closing-line">— Fin du scénario III —</div>
+</div>
